@@ -1,0 +1,37 @@
+package aaagettersandsetterscheat;
+import java.util.*;
+/**
+ *
+ * @author bcordaro2024
+ */
+public class AaagettersAndSettersCheat {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Set up scanner
+        Scanner scan = new Scanner(System.in);
+        //Ask for attribute name and store it
+        System.out.println("Enter attribute name");
+        String name = scan.next();
+        //Capitalize the first letter of the attribute name and store it
+        String name2 = name.substring(0, 1).toUpperCase() + name.substring(1);
+        
+        //Ask for data type and store it
+        System.out.println("Enter primitive data type");
+        String dataType = scan.next();
+        
+        //Ask for input and store it
+        System.out.println("Enter input name");
+        String input = scan.next();
+        
+        //Print out formated
+        System.out.println("public void set" + name2 + "(" + dataType + " " +
+                input + "){\n   " + name + " = " + input + ";\n}\n\npublic"
+                        + " double get" + name2 + "(){\n   return " + name + ";\n}\n"
+        );
+        
+    }
+    
+}
